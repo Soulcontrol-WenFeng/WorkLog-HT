@@ -179,7 +179,7 @@ if(a2->u8Type == 0x01 && a2->u16SubType == 0X4010)
 # 2023-10-10  
 ## 代码随笔  
 ```  
-typedef struct    
+typedef struct`rgb(9, 105, 218)`    
 {  
   uint8_t *buff;		//缓冲指针  
   volatile uint16_t nMaxLen;  //缓冲大小  
