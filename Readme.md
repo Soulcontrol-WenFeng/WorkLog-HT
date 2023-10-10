@@ -179,17 +179,17 @@ if(a2->u8Type == 0x01 && a2->u16SubType == 0X4010)
 # 2023-10-10  
 ## 代码随笔  
 ```  
-`typedef struct`    
-`{`  
-  `uint8_t *buff;`		//缓冲指针  
-  `volatile uint16_t nMaxLen;`  //缓冲大小  
-  `volatile uint16_t nUseLen;`  //使用大小  
-  `volatile uint16_t nReadPos;` //读位置  
-  `volatile uint16_t nWritePos;`//写位置  
-  `volatile uint16_t nTmpUseLen;` //临时使用  
-  `volatile uint16_t nTmpWPos;`   //临时写位置  
-  `volatile uint16_t nTmpWSize;`  //临时读位置  
-`}CycleBuff_T;`    
+typedef struct    
+{  
+  uint8_t *buff;		//缓冲指针  
+  volatile uint16_t nMaxLen;  //缓冲大小  
+  volatile uint16_t nUseLen;  //使用大小  
+  volatile uint16_t nReadPos; //读位置  
+  volatile uint16_t nWritePos;//写位置  
+  volatile uint16_t nTmpUseLen; //临时使用  
+  volatile uint16_t nTmpWPos;   //临时写位置  
+  volatile uint16_t nTmpWSize;  //临时读位置  
+}CycleBuff_T;    
 ```  
 
 
