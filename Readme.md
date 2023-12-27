@@ -96,6 +96,35 @@ https://oshwhub.com/Knight_Sin/abcd
 https://item.szlcsc.com/100181.html  
 https://item.szlcsc.com/458586.html  
 
+#####  个人对于方案一的理解：  
+方案一中使用的BLDC驱动DRV8301DCAR手册当中有一张原理图如下：  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/438827bb-e00d-4ed2-9b2c-2b03b8e15e7d)  
+该图意味着可以用SPI或者PWM进行控制  
+在该份芯片的手册当中，PWM输入有高边（HIGH SIDE)和低边（LOW SIDE)之分，关于高低边的解释，H桥的PWM控制等，有以下相关帖子：  
+https://superigbt.github.io/2022/11/03/SMPS/SMPS-highside-lowside/  
+https://blog.csdn.net/yyyyyrr5/article/details/106599525  
+
+芯片手册链接：  
+https://www.ti.com/cn/lit/ds/symlink/drv8301.pdf?ts=1703666240386&ref_url=https%253A%252F%252Fitem.szlcsc.com%252F  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
