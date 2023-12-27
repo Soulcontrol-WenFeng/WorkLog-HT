@@ -84,6 +84,17 @@ MCU的话打算选择STM32F103C8T6,不要问为什么，因为我手头上就有
 
 
 
+###  二、开源参考方案：  
+####  1.1 参考方案一  
+https://oshwhub.com/Knight_Sin/abcd  
+该方案仍然使用了TI 的BLDC驱动芯片，不过是DRV8301DCAR（区别于参考方案二），但是同时也使用了KNY3406C（场效应管，N沟道，漏源电压为60V，连续漏极电流为80A）  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/c5f4e8d1-8d12-4fdc-9879-54be63bc3aca)  
+
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/546f4e4a-c450-495f-8b07-24271d20e7f4)  
+
+立创商城链接：  
+https://item.szlcsc.com/100181.html  
+https://item.szlcsc.com/458586.html  
 
 
 
