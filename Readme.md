@@ -88,6 +88,11 @@ MCU的话打算选择STM32F103C8T6,不要问为什么，因为我手头上就有
 ####  1.1 参考方案一  
 https://oshwhub.com/Knight_Sin/abcd  
 该方案仍然使用了TI 的BLDC驱动芯片，不过是DRV8301DCAR（区别于参考方案二），但是同时也使用了KNY3406C（场效应管，N沟道，漏源电压为60V，连续漏极电流为80A）  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/e2af3f7c-0e90-472e-8e78-659ea895f882)  
+
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/fce89285-8880-417b-8e49-3eca778bb512)
+
+
 ![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/c5f4e8d1-8d12-4fdc-9879-54be63bc3aca)  
 
 ![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/546f4e4a-c450-495f-8b07-24271d20e7f4)  
@@ -127,11 +132,33 @@ https://item.szlcsc.com/80958.html
 PS:在学习过程中发现电路的电源部分均有多电容并联的设计存在，关于此设计找到的一些相关资料链接如下：  
 https://zhuanlan.zhihu.com/p/597152452  
 在开源项目 https://oshwhub.com/knight_sin/ji-yucw32f0-di-yi-ti-shifoc-qu-dong-qi  当中，有对多并联电容做了一个小解释，如下：  
-![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/6ac02ee2-b247-4a80-a7f4-5d603482d81f)
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/6ac02ee2-b247-4a80-a7f4-5d603482d81f)  
+
 
 
 
 ####  1.2 参考方案三  
+方案三为超迷你FOC方案 ，该方案为叠板设计，分为控制板和驱动板（up主说该份代码是自己写的，那应该是有别前两种方案用ODrive的开源代码且是基于STM32的，感觉可以先读该方案的源码）    
+控制板：  
+https://oshwhub.com/hvan/core_foc_mcupart  
+驱动板：  
+https://oshwhub.com/hvan/h7_core_foc  
+开源链接：  
+https://github.com/hvan110/miniFOCctrl  
+该方案有别于前两份的硬件设计，使用的电机驱动为MOS DRIVE加MOS管（前者在控制板，后者在驱动板），此外，控制板 增加了TFT屏幕驱动和CAN通信电路，还有一个AMP电路，应该是用于采样反馈信息用的
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/305d3aa5-0488-446e-a7ac-3a2d22d4e3d8)  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/8e1fb730-95c4-45c5-815e-e3379a4d25ff)  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/403e2307-b157-4117-9cb7-54d0b6418925)  
+  
+  
+  
+PS:关于米勒钳位的知识点，相关链接如下：  
+https://zhuanlan.zhihu.com/p/554854088#:~:text=%E6%9C%89%E6%BA%90%E7%B1%B3%E5%8B%92%E9%92%B3%E4%BD%8D%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%20%E6%A0%85%E6%9E%81%E5%92%8C%E6%BA%90%E6%9E%81%E4%B9%8B%E9%97%B4%E7%9A%84%E9%99%84%E5%8A%A0%E5%BC%80%E5%85%B3%E5%9C%A8%E9%AB%98dV%2Fdt%E6%83%85%E5%86%B5%E4%B8%8B%E6%8E%A7%E5%88%B6%E7%B1%B3%E5%8B%92%E7%94%B5%E6%B5%81%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%9C%A8%E8%BE%BE%E5%88%B0%E7%94%B5%E5%8E%8B%E6%B0%B4%E5%B9%B3%E5%90%8E%E7%9F%AD%E6%8E%A5%E6%A0%85%E6%9E%81%E8%87%B3%E6%BA%90%E6%9E%81%E4%BD%BFSiC%20MOSFET%E5%AE%8C%E5%85%A8%E5%85%B3%E9%97%AD%E3%80%82%20%E5%9C%A8%E5%85%B3%E6%96%AD%E5%BC%80%E5%85%B3%E6%9C%9F%E9%97%B4%EF%BC%8C%E5%BD%93%E6%A0%85%E6%9E%81%E7%94%B5%E5%8E%8B%E4%B8%8B%E9%99%8D%E5%88%B0%E4%BD%8E%E4%BA%8E%E7%9B%B8%E5%AF%B9%E4%BA%8EVEE%E7%9A%84%E9%98%88%E5%80%BC%E7%94%B5%E5%8E%8B%E5%80%BC%E6%97%B6%EF%BC%8C%E6%A3%80%E6%B5%8B%E5%88%B0%E6%A0%85%E6%9E%81%E7%94%B5%E5%8E%8B%E5%B9%B6%E6%BF%80%E6%B4%BB%E9%92%B3%E4%BD%8D%EF%BC%88%E8%A7%81%E5%9B%BE6%E3%80%82%20%E6%9C%89%E6%BA%90Miller%E9%92%B3%E4%BD%8D%EF%BC%89%E3%80%82,%E9%80%9A%E8%BF%87%E7%B1%B3%E5%8B%92%E7%94%B5%E5%AE%B9%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B1%E6%99%B6%E4%BD%93%E7%AE%A1%E5%88%86%E6%B5%81%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E6%B5%81%E7%BB%8F%E8%BE%93%E5%87%BA%E9%A9%B1%E5%8A%A8%E5%99%A8VOUT%E3%80%82%20%E7%B1%B3%E5%8B%92%E9%92%B3%E4%BD%8D%E5%8A%9F%E8%83%BD%E4%BB%85%E5%9C%A8SiC%20MOSFET%E5%85%B3%E9%97%AD%E6%9C%9F%E9%97%B4%E6%9C%89%E6%95%88%EF%BC%8C%E4%B8%8D%E5%BD%B1%E5%93%8DSiC%20MOS%E5%BC%80%E5%90%AF%E3%80%82%20%E5%AE%83%E5%8F%AF%E4%BB%A5%E8%8A%82%E7%9C%81%E6%88%90%E6%9C%AC%EF%BC%8C%E6%B6%88%E9%99%A4%E5%AF%B9%E8%B4%9F%E7%94%B5%E6%BA%90%E7%94%B5%E5%8E%8B%E5%92%8C%E9%A2%9D%E5%A4%96%E7%94%B5%E5%AE%B9%E5%99%A8%E7%9A%84%E9%9C%80%E8%A6%81%E5%AF%BC%E8%87%B4%E7%9A%84%E5%87%8F%E5%B0%91%E9%A9%B1%E5%8A%A8%E5%99%A8%E6%95%88%E7%8E%87%E3%80%82    
+https://zhuanlan.zhihu.com/p/416919304  
+
+
+
+
 
 
 
