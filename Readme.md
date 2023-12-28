@@ -164,6 +164,15 @@ https://blog.csdn.net/u013024788/article/details/128719287
 驱动板原理图如下：  
 ![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/00bdb554-f2dd-4980-95e8-d3afc70c58d6)    
 驱动板中，也有对输入电源进行滤波和储能并联的一排电容，同时该电容的封装均选取较大的，如1206封装。  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/049725fb-bd1f-47b3-8122-99bd12c3be48)  
+
+方案三采用的MCU为STM32F405RGT6,届时可根据情况进行替换。  
+
+
+
+
+###  总结  
+目前暂定参考以上三种方案，如有新方案可以继续添加  
 
 
 
