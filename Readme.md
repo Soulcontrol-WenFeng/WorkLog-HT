@@ -111,9 +111,27 @@ https://www.ti.com/cn/lit/ds/symlink/drv8301.pdf?ts=1703666240386&ref_url=https%
 
 
 
+#  2023-12-28  
+##  记录  
+####  1.2 参考方案二  
+https://oshwhub.com/yourallo/youngfoc  
+该方案使用的无刷电机驱动芯片为 DRV8313(同为TI的无刷电机芯片，区别于参考方案一)，磁编码器用的是AS5600（搭配磁铁使用）  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/ca16c107-1369-4019-b2b7-eb1044128f78)  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/ef2a26ed-5a0b-4471-a0cf-e94c9bc3524a)  
+
+立创商城链接：  
+https://item.szlcsc.com/93675.html  
+https://item.szlcsc.com/80958.html  
+
+
+PS:在学习过程中发现电路的电源部分均有多电容并联的设计存在，关于此设计找到的一些相关资料链接如下：  
+https://zhuanlan.zhihu.com/p/597152452  
+在开源项目 https://oshwhub.com/knight_sin/ji-yucw32f0-di-yi-ti-shifoc-qu-dong-qi  当中，有对多并联电容做了一个小解释，如下：  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/6ac02ee2-b247-4a80-a7f4-5d603482d81f)
 
 
 
+####  1.2 参考方案三  
 
 
 
