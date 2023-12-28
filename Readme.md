@@ -145,7 +145,7 @@ https://oshwhub.com/hvan/core_foc_mcupart
 https://oshwhub.com/hvan/h7_core_foc  
 开源链接：  
 https://github.com/hvan110/miniFOCctrl  
-该方案有别于前两份的硬件设计，使用的电机驱动为MOS DRIVE加MOS管（前者在控制板，后者在驱动板），此外，控制板 增加了TFT屏幕驱动和CAN通信电路，还有一个AMP电路，应该是用于采样反馈信息用的
+该方案有别于前两份的硬件设计，使用的电机驱动为MOS DRIVE加MOS管（前者在控制板，后者在驱动板），此外，控制板 增加了TFT屏幕驱动和CAN通信电路，还有一个AMP电路，应该是用于采样反馈信息用的（在驱动板上，AMP的采样信号为MOS管漏极的电压）
 ![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/305d3aa5-0488-446e-a7ac-3a2d22d4e3d8)  
 ![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/8e1fb730-95c4-45c5-815e-e3379a4d25ff)  
 ![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/403e2307-b157-4117-9cb7-54d0b6418925)  
@@ -157,6 +157,13 @@ https://zhuanlan.zhihu.com/p/554854088#:~:text=%E6%9C%89%E6%BA%90%E7%B1%B3%E5%8B
 
         
 https://zhuanlan.zhihu.com/p/416919304  
+    
+https://blog.csdn.net/u013024788/article/details/128719287    
+
+
+驱动板原理图如下：  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/00bdb554-f2dd-4980-95e8-d3afc70c58d6)    
+驱动板中，也有对输入电源进行滤波和储能并联的一排电容，同时该电容的封装均选取较大的，如1206封装。  
 
 
 
