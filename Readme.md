@@ -177,6 +177,11 @@ https://blog.csdn.net/u013024788/article/details/128719287
 #  2023-12-29  
 ##  方案解析与理解：  
 方案一：  
+链接：  https://oshwhub.com/Knight_Sin/abcd   
+作者在项目中有说到该项目是有以学习为目的，硬件为了契合ART-PI，ART-PI是RT-THREAD团队设计的一款具有扩展功能的DIY开源硬件。  致力打造一个开源的软硬件平台。  
+github 仓库地址 ： https://github.com/RT-Thread-Studio/sdk-bsp-stm32h750-realthread-artpi    
+
+gitee 仓库地址 ： https://gitee.com/mirrors/ART-Pi   
 
 
 
