@@ -182,6 +182,17 @@ https://blog.csdn.net/u013024788/article/details/128719287
 github 仓库地址 ： https://github.com/RT-Thread-Studio/sdk-bsp-stm32h750-realthread-artpi    
 
 gitee 仓库地址 ： https://gitee.com/mirrors/ART-Pi   
+方案一中有CAN接口，TYPEC通信接口，SPI FLASH电路以及一个IPS屏幕，是一个功能比较完整的板子。  
+
+关于电流采样，有以下关于FOC三种电流采样资料可供参考：  
+https://zhuanlan.zhihu.com/p/357517561?utm_id=0  
+  
+###  1.1 总体思路  
+MCU通过PWM输出控制电机驱动芯片对电机进行驱动  
+在该工程中，PWM输出分为高边和低边。  
+
+
+
 
 
 
