@@ -208,10 +208,16 @@ MCU通过PWM输出控制电机驱动芯片对电机进行驱动
 ###  继续Layout  腰更痛了今天  
 
 
+#  2024-01-05  
+##  今日任务  
+###  继续Layout，在关于DC-DC电源Layout当中，有些许注意事项，比如输入滤波和输出滤波回路要短，要注意线路过长造成的杂散电感，在输出部分当中，往往有一个输出电感可以滤除回路产生的杂散电感，所以更需要注意输入端的电流回路以及其产生的杂散电感，如下：  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/3a7eb642-9261-4b5c-b3d5-3f81404a5fe0)  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/46ba06e1-7673-456c-af06-e9b6b527e463)  
+![image](https://github.com/Soulcontrol-WenFeng/WorkLog-HT/assets/74033919/af6f9a4f-1e65-4ee1-98e7-ee4de08d1b6a)  
 
+相关链接：  
 
-
-
+https://zhuanlan.zhihu.com/p/161680198    
 
 
 
