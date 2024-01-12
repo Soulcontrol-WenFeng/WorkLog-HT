@@ -254,6 +254,10 @@ https://zhuanlan.zhihu.com/p/668408627#:~:text=%E4%B8%80%E8%88%AC%E6%83%85%E5%86
 #  2024-01-12  
 ##  今日，提交离职申请，准备离职。  
 
+以下是一篇关于cmake的文章，做个结尾，链接如下：  
+https://zhuanlan.zhihu.com/p/371257515  
+
+
 
 
 
